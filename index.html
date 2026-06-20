@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babies Allowance Registration Portal - Register Now</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>👶 Babies Allowance Portal</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Register</a></li>
+                <li><a href="track.html">Track Application</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin/dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Claim Your Allowance Today</h2>
+                <p>Quick, simple, and secure registration process</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="form-section">
+            <div class="form-card">
+                <h2>Application Form</h2>
+                <p class="form-intro">Fill in your details to register for your allowance claim</p>
+
+                <form id="applicationForm">
+                    <!-- Personal Information -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                placeholder="Enter your full name" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your@email.com" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="+1 (555) 000-0000" 
+                                required
+                            >
+                        </div>
+                    </fieldset>
+
+                    <!-- Allowance Details -->
+                    <fieldset>
+                        <legend>Allowance Details</legend>
+                        
+                        <div class="form-group">
+                            <label for="requestedAmount">Requested Amount *</label>
+                            <input 
+                                type="number" 
+                                id="requestedAmount" 
+                                name="requestedAmount" 
+                                placeholder="Enter amount (e.g., 5000)" 
+                                min="0" 
+                                step="0.01"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="applicationReason">Reason for Application *</label>
+                            <textarea 
+                                id="applicationReason" 
+                                name="applicationReason" 
+                                placeholder="Briefly explain the reason for your allowance claim..." 
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
+                    </fieldset>
+
+                    <!-- Payment Details -->
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="paymentMethod">Preferred Payment Method *</label>
+                            <select id="paymentMethod" name="paymentMethod" required>
+                                <option value="">-- Select Payment Method --</option>
+                                <option value="Bank Transfer">Bank Transfer</option>
+                                <option value="PayPal">PayPal</option>
+                                <option value="Cryptocurrency">Cryptocurrency</option>
+                                <option value="Mobile Wallet">Mobile Wallet</option>
+                                <option value="Direct Deposit">Direct Deposit</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="accountDetails">Account Details *</label>
+                            <input 
+                                type="text" 
+                                id="accountDetails" 
+                                name="accountDetails" 
+                                placeholder="Your account/wallet address or identifier" 
+                                required
+                            >
+                        </div>
+                    </fieldset>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message hidden">
+                    <div class="success-content">
+                        <h3>✅ Application Submitted Successfully!</h3>
+                        <p>Your tracking number is:</p>
+                        <div class="tracking-display">
+                            <span id="trackingNumberDisplay"></span>
+                            <button type="button" class="btn-copy" onclick="copyTrackingNumber()">Copy</button>
+                        </div>
+                        <p class="success-note">Use this number to track your application status.</p>
+                        <a href="track.html" class="btn btn-primary">Track Your Application</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Babies Allowance Registration Portal - Claiming Your Allowance</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: <a href="mailto:caring283@gmail.com">caring283@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Register</a></li>
+                        <li><a href="track.html">Track</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babies Allowance Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

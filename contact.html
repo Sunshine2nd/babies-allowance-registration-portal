@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Support - Babies Allowance Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>👶 Babies Allowance Portal</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Register</a></li>
+                <li><a href="track.html">Track Application</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="admin/dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Get in Touch</h2>
+                <p>We're here to help with any questions or concerns</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="contact-section">
+            <div class="contact-wrapper">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-card">
+                        <h3>📧 Email Support</h3>
+                        <p>
+                            <strong>Primary Email:</strong><br>
+                            <a href="mailto:caring283@gmail.com">caring283@gmail.com</a>
+                        </p>
+                        <p class="info-note">We typically respond to emails within 24-48 hours</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🕐 Support Hours</h3>
+                        <ul>
+                            <li>Monday - Friday: 9:00 AM - 5:00 PM (EST)</li>
+                            <li>Saturday - Sunday: Closed</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>❓ Common Issues</h3>
+                        <ul>
+                            <li>Application status tracking</li>
+                            <li>Payment method questions</li>
+                            <li>Application assistance</li>
+                            <li>Account issues</li>
+                            <li>General inquiries</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💡 Tips for Contacting Us</h3>
+                        <ul>
+                            <li>Include your tracking number if you have one</li>
+                            <li>Clearly describe your issue or question</li>
+                            <li>Provide your contact information</li>
+                            <li>Be as specific as possible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-card">
+                        <h2>Send us a Message</h2>
+                        <p class="form-intro">Fill out the form below and we'll get back to you as soon as possible</p>
+
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="contactName" 
+                                    name="contactName" 
+                                    placeholder="Your full name" 
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="contactEmail" 
+                                    name="contactEmail" 
+                                    placeholder="your@email.com" 
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="trackingNumber">Tracking Number (Optional)</label>
+                                <input 
+                                    type="text" 
+                                    id="trackingNumber" 
+                                    name="trackingNumber" 
+                                    placeholder="APP-2026-XXXXXX"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">-- Select Subject --</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Application Status">Application Status</option>
+                                    <option value="Payment Issue">Payment Issue</option>
+                                    <option value="Technical Problem">Technical Problem</option>
+                                    <option value="Account Help">Account Help</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="Please describe your inquiry or issue in detail..." 
+                                    rows="6"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                <button type="reset" class="btn btn-secondary">Clear</button>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="contactSuccess" class="success-message hidden">
+                            <h3>✅ Message Sent Successfully!</h3>
+                            <p>Thank you for contacting us. We'll get back to you soon.</p>
+                            <button type="button" class="btn btn-primary" onclick="resetContactForm()">Send Another Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Babies Allowance Registration Portal - Claiming Your Allowance</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: <a href="mailto:caring283@gmail.com">caring283@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Register</a></li>
+                        <li><a href="track.html">Track</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babies Allowance Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

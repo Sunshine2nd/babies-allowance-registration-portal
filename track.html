@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Application - Babies Allowance Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>👶 Babies Allowance Portal</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Register</a></li>
+                <li><a href="track.html" class="active">Track Application</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin/dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Track Your Application</h2>
+                <p>Check the status of your allowance claim anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="tracking-section">
+            <div class="tracking-card">
+                <h2>Application Tracker</h2>
+                <p class="tracking-intro">Enter your tracking number to check your application status</p>
+
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="trackingInput" 
+                        placeholder="Enter tracking number (e.g., APP-2026-483927)" 
+                        class="tracking-input"
+                    >
+                    <button type="button" id="searchBtn" class="btn btn-primary">Search</button>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="hidden">
+                    <div id="notFoundMessage" class="error-message hidden">
+                        <p>❌ Tracking number not found. Please check and try again.</p>
+                    </div>
+
+                    <div id="resultDetails" class="result-details hidden">
+                        <div class="status-badge" id="statusBadge"></div>
+                        
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <label>Tracking Number</label>
+                                <p id="resultTrackingNumber"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Full Name</label>
+                                <p id="resultName"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Email</label>
+                                <p id="resultEmail"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Phone</label>
+                                <p id="resultPhone"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Requested Amount</label>
+                                <p id="resultAmount"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Payment Method</label>
+                                <p id="resultPaymentMethod"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Submission Date</label>
+                                <p id="resultDate"></p>
+                            </div>
+                            <div class="detail-item">
+                                <label>Current Status</label>
+                                <p id="resultStatus"></p>
+                            </div>
+                        </div>
+
+                        <div class="reason-section">
+                            <label>Application Reason</label>
+                            <p id="resultReason"></p>
+                        </div>
+
+                        <div class="notes-section">
+                            <label>Administrator Notes</label>
+                            <p id="resultNotes"></p>
+                        </div>
+
+                        <div class="timeline">
+                            <h3>Application Timeline</h3>
+                            <div class="timeline-item">
+                                <span class="timeline-date" id="timelineSubmitted"></span>
+                                <span class="timeline-text">Application Submitted</span>
+                            </div>
+                            <div class="timeline-item" id="timelineReview">
+                                <span class="timeline-date" id="timelineReviewDate"></span>
+                                <span class="timeline-text">Under Review</span>
+                            </div>
+                            <div class="timeline-item" id="timelineCompleted">
+                                <span class="timeline-date" id="timelineCompletedDate"></span>
+                                <span class="timeline-text" id="timelineCompletedText"></span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-secondary" onclick="clearSearch()">New Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Babies Allowance Registration Portal - Claiming Your Allowance</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: <a href="mailto:caring283@gmail.com">caring283@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Register</a></li>
+                        <li><a href="track.html">Track</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babies Allowance Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tracking.js"></script>
+</body>
+</html>
