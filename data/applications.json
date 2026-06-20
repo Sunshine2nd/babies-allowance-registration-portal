@@ -1,0 +1,41 @@
+[
+  {
+    "trackingNumber": "APP-2026-483927",
+    "fullName": "John Doe",
+    "email": "john@example.com",
+    "phone": "+1 (555) 123-4567",
+    "requestedAmount": "$5,000",
+    "paymentMethod": "Bank Transfer",
+    "accountDetails": "John Doe - Account #1234567890",
+    "applicationReason": "Monthly allowance claim",
+    "status": "Pending Review",
+    "dateSubmitted": "June 15, 2026",
+    "adminNotes": "Application under review. Additional documentation may be required."
+  },
+  {
+    "trackingNumber": "APP-2026-512847",
+    "fullName": "Jane Smith",
+    "email": "jane@example.com",
+    "phone": "+1 (555) 234-5678",
+    "requestedAmount": "$3,500",
+    "paymentMethod": "PayPal",
+    "accountDetails": "@janesmith",
+    "applicationReason": "Educational allowance",
+    "status": "Approved",
+    "dateSubmitted": "June 10, 2026",
+    "adminNotes": "Approved for processing. Funds will be transferred within 5-7 business days."
+  },
+  {
+    "trackingNumber": "APP-2026-695231",
+    "fullName": "Michael Johnson",
+    "email": "michael@example.com",
+    "phone": "+1 (555) 345-6789",
+    "requestedAmount": "$7,500",
+    "paymentMethod": "Cryptocurrency",
+    "accountDetails": "0x742d35Cc6634C0532925a3b844Bc7e7595f",
+    "applicationReason": "Investment purposes",
+    "status": "More Information Required",
+    "dateSubmitted": "June 5, 2026",
+    "adminNotes": "Please provide additional documentation for investment purposes verification."
+  }
+]
