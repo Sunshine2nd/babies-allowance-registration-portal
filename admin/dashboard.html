@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Babies Allowance Portal</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+    <!-- Admin Navigation -->
+    <nav class="admin-navbar">
+        <div class="admin-container">
+            <div class="admin-nav-brand">
+                <h1>👶 Admin Dashboard</h1>
+            </div>
+            <div class="admin-nav-actions">
+                <a href="../index.html" class="btn btn-small">Back to Portal</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Main Content -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h2>Application Management Dashboard</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3 id="totalApps">0</h3>
+                        <p>Total Applications</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="pendingApps">0</h3>
+                        <p>Pending Review</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="approvedApps">0</h3>
+                        <p>Approved</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="rejectedApps">0</h3>
+                        <p>Rejected</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Controls -->
+            <div class="dashboard-controls">
+                <div class="search-control">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search by tracking number or name..." 
+                        class="search-input"
+                    >
+                </div>
+                <div class="control-buttons">
+                    <button id="exportBtn" class="btn btn-secondary">📥 Export to CSV</button>
+                    <button id="refreshBtn" class="btn btn-secondary">🔄 Refresh</button>
+                </div>
+            </div>
+
+            <!-- Applications Table -->
+            <div class="table-wrapper">
+                <table class="applications-table">
+                    <thead>
+                        <tr>
+                            <th>Tracking Number</th>
+                            <th>Applicant Name</th>
+                            <th>Email</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date Submitted</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicationsTableBody">
+                        <!-- Data will be populated here -->
+                    </tbody>
+                </table>
+                <div id="noData" class="no-data">
+                    <p>No applications found. Applications will appear here once submitted.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Application Details -->
+    <div id="applicationModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Application Details</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-field">
+                        <label>Tracking Number</label>
+                        <p id="modalTrackingNumber"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Full Name</label>
+                        <p id="modalFullName"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Email</label>
+                        <p id="modalEmail"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Phone</label>
+                        <p id="modalPhone"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Requested Amount</label>
+                        <p id="modalAmount"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Payment Method</label>
+                        <p id="modalPaymentMethod"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Account Details</label>
+                        <p id="modalAccountDetails"></p>
+                    </div>
+                    <div class="modal-field">
+                        <label>Submission Date</label>
+                        <p id="modalDate"></p>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <label>Application Reason</label>
+                    <p id="modalReason"></p>
+                </div>
+
+                <div class="modal-section">
+                    <label>Current Status</label>
+                    <div id="modalStatusContainer"></div>
+                </div>
+
+                <div class="modal-section">
+                    <label>Administrator Notes</label>
+                    <textarea id="modalNotes" placeholder="Add or edit notes for this application..."></textarea>
+                </div>
+
+                <div class="modal-section">
+                    <label>Update Status</label>
+                    <div class="status-buttons">
+                        <button class="btn btn-status btn-pending" onclick="updateStatus('Pending Review')">⏳ Pending</button>
+                        <button class="btn btn-status btn-approved" onclick="updateStatus('Approved')">✅ Approve</button>
+                        <button class="btn btn-status btn-rejected" onclick="updateStatus('Rejected')">❌ Reject</button>
+                        <button class="btn btn-status btn-info" onclick="updateStatus('More Information Required')">ℹ️ More Info</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="saveChanges()">Save Changes</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="admin-container">
+            <p>&copy; 2026 Babies Allowance Portal - Admin Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
